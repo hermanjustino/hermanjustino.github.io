@@ -65,6 +65,12 @@ h1 {
   /*width: 60%;*/
   line-height: 3em;
   font-size: 20px;
+  width: 70%;
+}
+
+#about_paragraph{
+  display: flex;
+  justify-content: center;
 }
 
 .social-feed {
@@ -74,6 +80,12 @@ h1 {
 #founders {
   display: flex;
   justify-content: center;
+}
+
+#social_media_list {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
 #founders, #social {
@@ -103,8 +115,9 @@ h1 {
 }
 
 footer {
-  color: #000;
+  color: #4e4e4e;
   background-color: #fff;
   padding: 10px;
   text-align: center;
+  font-size: 11px;
 }
