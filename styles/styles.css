@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 
+/* -------- NAVBAR STYLES --------- */
 .topnav {
   overflow: hidden;
   background-color:white;
@@ -16,7 +17,7 @@ body {
 .topnav a {
   float:left;
   display: block;
-  color: #f2f2f2;
+  color: #101010;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -76,32 +77,85 @@ body {
   }
 }
 
+/*--------- TYPEWRITER ON ABOUT PAGE ---------------*/
+
+#text-body {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.typewriter-container {
+  text-align: center;
+  padding: 25px;
+  max-width: 65%;
+  background-color: #fff;
+}
+
+.typewriter-text {
+  font-size: 18px;
+  white-space: pre-line;
+  overflow: hidden;
+  padding-right: 5px;
+  min-height: 1em; /* Ensure a minimum height for the text container */
+  line-height: 2;
+}
+
+/* ----- FOOTER STYLES ------- */
 
 footer {
-  color: #4e4e4e;
-  background-color: #fff;
-  padding: 10px;
-  font-size: 11px;
+  background-color: white;
+  color: black;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-#footer_content{
-display: flex;
-justify-content: space-evenly;
-}
-
-#social_media_list {
+.footer-left {
   display: flex;
-  justify-content: space-between;
 }
 
-#link_block_footer ul li a {
-  text-align: left;
-  text-decoration: none;
-  color: inherit;
-}
-
-#link_block_list li {
-  text-align: left;
+.footer-left ul {
   list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.footer-left ul li {
+  margin-bottom: 5%;
+}
+
+.footer-left ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-title {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-right {
+      display: none;
+  }
+  .footer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+
+  .footer-left ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 20px;
+  }
 }
