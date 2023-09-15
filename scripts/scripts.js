@@ -19,7 +19,7 @@ function typeWriter() {
     if (charIndex < text.length) {
         typewriterText.innerHTML += text.charAt(charIndex);
         charIndex++;
-        setTimeout(typeWriter, 40); // Adjust the typing speed here (milliseconds)
+        setTimeout(typeWriter, 50); // Adjust the typing speed here (milliseconds)
     }
 }
 
