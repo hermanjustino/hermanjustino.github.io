@@ -77,6 +77,45 @@ body {
   }
 }
 
+/* -------- MAIN ON MAIN PAGE --------*/
+
+main {
+  padding: 10%;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.gallery-item img {
+  max-width: 35%;
+}
+
+.artist-name {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .artist-name {
+  display: block;
+}
+
 /*--------- TYPEWRITER ON ABOUT PAGE ---------------*/
 
 #text-body {
@@ -139,8 +178,13 @@ footer {
 
 .footer-title {
   font-size: 100px;
-  font-weight: bold;
+  font-weight:bolder;
   margin: 0;
+}
+
+.footer-title a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 600px) {

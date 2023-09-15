@@ -30,15 +30,18 @@
   </div>
 
   <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <section id="about_paragraph">
-      <p>
-        The Outlet Network aims to connect artists in the city to venues, providing networking and professional opportunities for creatives. Our vision is to bring creatives together, fostering collaboration and innovation within the digital art community.
-      </p>
+    <section class="gallery">
+        <div class="gallery-item" onclick="openArtistSeries('artist1')">
+            <img src="./assets/artist1.jpg" alt="Artist 1">
+            <div class="artist-name">Dorian Schwartz</div>
+        </div>
+        <div class="gallery-item" onclick="openArtistSeries('artist2')">
+            <img src="./assets/artist2.jpg" alt="Artist 2">
+            <div class="artist-name">Jair Castillo</div>
+        </div>
+        <!-- Add more gallery items as needed -->
     </section>
-    </section>
-  </main>
+</main>
 <hr>
   <footer>
     <div class="footer-lists">
@@ -58,7 +61,7 @@
       </div>
     </div>
     <div class="footer-right">
-        <h1 class="footer-title">OI X THE ARTIST</h1>
+      <h1 class="footer-title"><a href="./pages/artists/artist1.html">OI X THE ARTIST</a></h1>
     </div>
 </footer>
 </body>

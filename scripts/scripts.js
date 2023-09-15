@@ -27,3 +27,7 @@ function typeWriter() {
 window.onload = function() {
     typeWriter();
 };
+
+function openArtistSeries(artist) {
+  window.location.href = `${artist}.html`;
+}
