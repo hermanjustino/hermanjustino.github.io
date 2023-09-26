@@ -31,3 +31,23 @@ window.onload = function() {
 function openArtistSeries(artist) {
   window.location.href = `${artist}.html`;
 }
+
+/* --------- GALLERY ARTIST SERIES ---------- */
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const gallery = document.querySelector(".gallery");
+
+prevBtn.addEventListener("click", () => {
+    gallery.scrollBy({
+        left: -200, // Adjust the scroll amount as needed
+        behavior: "smooth",
+    });
+});
+
+nextBtn.addEventListener("click", () => {
+    gallery.scrollBy({
+        left: 200, // Adjust the scroll amount as needed
+        behavior: "smooth",
+    });
+});

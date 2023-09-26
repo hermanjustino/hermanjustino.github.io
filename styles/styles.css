@@ -21,7 +21,8 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight:bolder;
 }
 
 .topnav a:hover {
@@ -77,43 +78,68 @@ body {
   }
 }
 
-/* -------- MAIN ON MAIN PAGE --------*/
+/* -------- ARTIST GALLERY ON MAIN PAGE --------*/
 
-main {
-  padding: 10%;
+
+.gallery_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+.gallery-container {
+  margin: 0 auto;
+  padding: 1%;
   text-align: center;
 }
 
 .gallery {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .gallery-item {
-  margin: 10px;
-  cursor: pointer;
-  text-align: center;
+  flex: 0 0 auto;
+  margin-right: 2px;
+  scroll-snap-align: start;
+  text-align: left;
+  width: 40%;
 }
 
 .gallery-item img {
-  max-width: 35%;
+  width: 100%;
+  max-height: 650px;
+  height: auto;
 }
 
-.artist-name {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.7);
+.caption {
+  margin-top: 10px;
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000;
   color: #fff;
-  padding: 5px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size:20px;
 }
 
-.gallery-item:hover .artist-name {
-  display: block;
+button:hover {
+  background-color: #333;
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-item {
+      width: 100%;
+  }
 }
 
 /*--------- TYPEWRITER ON ABOUT PAGE ---------------*/
@@ -142,12 +168,24 @@ main {
   line-height: 2;
 }
 
+/*----- CIRCLE ON CONTACT PAGE -----*/
+
+#circle-container{
+  background-color:#fff;
+    border:1px solid black;    
+    height: 300px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:50%;
+}
+
 /* ----- FOOTER STYLES ------- */
 
 footer {
   background-color: white;
   color: black;
-  padding: 0;
+  padding-left: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,10 +208,11 @@ footer {
 .footer-left ul li a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .footer-right {
-  text-align: right;
+  text-align: left;
 }
 
 .footer-title {
@@ -185,6 +224,15 @@ footer {
 .footer-title a {
   text-decoration: none;
   color: black;
+}
+
+#footer-description {
+  max-width: 20%;
+}
+
+#footer-description-paragraph {
+  font-size: small;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 600px) {
