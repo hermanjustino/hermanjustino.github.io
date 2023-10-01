@@ -8,8 +8,11 @@ main {
 }
 
 .faq-section {
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 1.5%;
+    border-radius: 10px;
 }
 
 .faq-list {
