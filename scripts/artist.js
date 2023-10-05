@@ -12,7 +12,7 @@ window.onload = function () {
             id: '1',
             name: 'Dorian Schwartz',
             description: 'One sentence description about Artist 1.',
-            largeImage: 'artist1_large.jpg',
+            largeImage: '../assets/artist1_large.jpg',
             headline: 'Dorian Schwartz',
             detailDescription: 'artist + psychotherapist ',
             // Add customizable content (images, videos, text) here for Artist 1

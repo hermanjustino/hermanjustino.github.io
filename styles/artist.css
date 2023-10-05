@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#artist_main_image {
+    width: 50%;
+}
+
+.artist-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artist_detail_headlines {
+    padding: 1px 20px;
+}
+
+#artist_headline {
+    font-size:120px;
+    font-weight:lighter;
+}
