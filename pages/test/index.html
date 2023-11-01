@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HJ - Links</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./portfoliofavicon.png">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Fashion Website</h1>
+        <img src="./logo.jpg" alt="Logo" class="logo_img">
     </header>
     <main>
-        <section class="artist-profile">
-            <img src="artist1.jpg" alt="Artist 1">
-            <h2>Artist Name 1</h2>
-            <p>One sentence description about Artist 1.</p>
-            <a href="artist.html?artist=1">Learn More</a>
-        </section>
-        <section class="artist-profile">
-            <img src="artist2.jpg" alt="Artist 2">
-            <h2>Artist Name 2</h2>
-            <p>One sentence description about Artist 2.</p>
-            <a href="artist.html?artist=2">Learn More</a>
-        </section>
-        <!-- Add more artist profiles as needed -->
+        <ul class="link-list">
+            <li>
+                <img src="./githubfavicon.png" alt="github favicon">
+                <a href="https://github.com/hermanjustino" class="link-title">Github</a>
+                <button class="share-button" onclick="share('https://example.com/page1')">Share</button>
+            </li>
+            <li>
+                <img src="./linkedinfavicon.png" alt="linkedin favicon">
+                <a href="https://www.linkedin.com/in/hermanjustino/" class="link-title">LinkedIn</a>
+                <button class="share-button" onclick="share('https://example.com/page2')">Share</button>
+            </li>
+            <li>
+                <img src="./portfoliofavicon.png" alt="linkedin favicon">
+                <a href="https://hermanjustino.com" class="link-title">Portfolio</a>
+                <button class="share-button" onclick="share('https://example.com/page2')">Share</button>
+            </li>
+        </ul>
     </main>
     <footer>
-        <p>&copy; 2023 Fashion Website. All rights reserved.</p>
+        <p>Herman Justino 2023</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

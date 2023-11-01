@@ -189,6 +189,10 @@ button:hover {
     width:50%;
 }
 
+#contact-page {
+  display: block;
+}
+
 /* ----- FOOTER STYLES ------- */
 
 footer {
