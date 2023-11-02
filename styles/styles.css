@@ -179,20 +179,40 @@ button:hover {
 
 /*----- CIRCLE ON CONTACT PAGE -----*/
 
-#circle-container{
-  background-color:#fff;
-    border:1px solid black;    
-    height: 300px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    width:50%;
+.contact-holder{
+  display: flex;
+  justify-content: center;
+  padding-top:15%;
+  padding-bottom:15%;
 }
 
-#contact-page {
-  display: block;
+.contact-container {
+  padding: 60px;
+  border: 1px solid #000;
+  border-radius: 50%; /* Create a circular border */
+  width: 60%;
 }
 
+.contact-container p {
+  margin: 10px 0;
+}
+
+.contact-container h1 {
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile styles */
+
+  .contact-holder{
+    padding-top:8%;
+    padding-bottom:8%;
+  }
+
+  .contact-container {
+      border: none; /* Remove the circular border on contact container */
+  }
+}
 /* ----- FOOTER STYLES ------- */
 
 footer {

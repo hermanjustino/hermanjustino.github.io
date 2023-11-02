@@ -15,7 +15,7 @@
         id: '2',
         name: 'Artist Name 2',
         description: 'One sentence description about Artist 2.',
-        largeImage: 'artist2_large.jpg',
+        largeImage: '../assets/artist2_large.jpg',
         headline: 'Headline for Artist 2',
         detailDescription: 'Two sentence description about Artist 2 and their work.',
         // Add customizable content (images, videos, text) here for Artist 2
