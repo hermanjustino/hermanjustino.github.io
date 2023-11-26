@@ -36,7 +36,7 @@ function openArtistSeries(artist) {
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
-const gallery = document.querySelector(".gallery");
+const gallery = document.getElementById("gallery");
 
 prevBtn.addEventListener("click", () => {
     gallery.scrollBy({

@@ -15,6 +15,10 @@ main {
     border-radius: 10px;
 }
 
+.faq-title {
+    font-size:4em;
+}
+
 .faq-list {
     list-style: none;
     padding: 0;
@@ -29,6 +33,7 @@ main {
 
 .question {
     font-weight: bold;
+    font-size:1.8em;
 }
 
 .answer {
