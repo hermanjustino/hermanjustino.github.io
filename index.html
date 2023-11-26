@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
 
-<body>
+<body onload="populateSlideshow()">
   <div class="topnav" id="myTopnav">
     <a href="./pages/series.html">ARTIST SERIES</a>
     <div class="vl"></div>
@@ -76,6 +76,11 @@
   </footer>
   <script src="./scripts/scripts.js"></script>
   <script src="./scripts/artist.js"></script>
+  <script>
+    window.onload = function() {
+      populateSlideshow();
+    };
+  </script>
 </body>
 
 </html>

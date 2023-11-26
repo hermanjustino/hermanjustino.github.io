@@ -3,10 +3,10 @@
     {
         id: '1',
         name: 'Dorian Schwartz',
-        description: 'One sentence description about Artist 1.',
+        description: 'artist + psychotherapist',
         largeImage: '../assets/artist1_large.jpg',
         headline: 'Dorian Schwartz',
-        detailDescription: 'artist + psychotherapist ',
+        detailDescription: 'artist + psychotherapist',
         photo: './assets/artist1.jpg'
         // Add customizable content (images, videos, text) here for Artist 1
     },
@@ -24,7 +24,7 @@
         id: '3',
         name: 'Jair Castillo',
         description: 'One sentence description about Artist 2.',
-        largeImage: '../assets/artist2_large.jpg',
+        largeImage: '../assets/artist3.jpg',
         headline: 'Headline for Artist 2',
         detailDescription: 'Two sentence description about Artist 2 and their work.',
         photo: './assets/artist3.jpg'
@@ -34,7 +34,7 @@
         id: '4',
         name: 'Jair Castillo',
         description: 'One sentence description about Artist 2.',
-        largeImage: '../assets/artist2_large.jpg',
+        largeImage: '../assets/artist3.jpg',
         headline: 'Headline for Artist 2',
         detailDescription: 'Two sentence description about Artist 2 and their work.',
         photo: './assets/artist4.jpg'
@@ -53,7 +53,7 @@
     // Add more artist data as needed
 ];
 
-window.onload = function () {
+function populateArtistPage() {
     // Retrieve artist ID from the URL query string
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -62,26 +62,39 @@ window.onload = function () {
     // Find the artist by ID
     const artist = artists.find(a => a.id === artistId);
 
+    // Update the content on the artist detail page//Get the container for the artist page
+    const artistPageContainer = document.querySelector(".artist-detail");
+
     if (artist) {
-        // Update the content on the artist detail page
-        const artistNameElement = document.querySelector('.artist_name');
-        const artistImageElement = document.querySelector('.artist-detail img');
-        const artistHeadlineElement = document.querySelector('.artist-detail h2');
-        const artistDescriptionElement = document.querySelector('.artist-detail p');
-        const pageTitleElement = document.querySelector('.page_title');
 
-        artistNameElement.textContent = artist.name;
-        artistImageElement.src = artist.largeImage;
-        artistHeadlineElement.textContent = artist.headline;
-        artistDescriptionElement.textContent = artist.detailDescription;
-        pageTitleElement.textContent = artist.name + ' - Outlet';
+        const image = document.createElement("img");
+        image.id = "artist_main_image";
+        image.alt = `"${artist.name} Large Image"`;
+        image.src = artist.photo;
+        artistPageContainer.appendChild(image);
 
-        //Load artists name in slideshow
+        const artistText = document.createElement("div");
+        artistText.className = "artist_detail_headlines";
+        artistPageContainer.appendChild(artistText);
+
+        const artistHeadline = document.createElement("h2");
+        artistHeadline.id = "artist_headline";
+        artistHeadline.textContent = artist.headline;
+        artistText.appendChild(artistHeadline);
+
+        const artistDescription = document.createElement("p");
+        artistDescription.id = "artistText"
+        artistDescription.textContent = artist.detailDescription;
+        artistText.appendChild(artistDescription);
+
+        document.title = `Outlet Network - ${artist.name}`;
+
     }
-};
+}
 
 // Function to populate the slideshow
 function populateSlideshow() {
+    console.log("Loading Populate slideshow function");
     const slideshowContainer = document.getElementById("gallery");
   
     artists.forEach(artist => {
@@ -114,6 +127,4 @@ function populateSlideshow() {
       slideshowContainer.appendChild(slide);
     });
   }
-  
-  // Call the function to populate the slideshow
-  populateSlideshow();
+

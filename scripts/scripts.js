@@ -23,11 +23,6 @@ function typeWriter() {
     }
 }
 
-// Start the typewriter effect when the page loads
-window.onload = function() {
-    typeWriter();
-};
-
 function openArtistSeries(artist) {
   window.location.href = `${artist}.html`;
 }
