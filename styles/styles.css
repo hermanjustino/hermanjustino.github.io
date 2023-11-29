@@ -115,18 +115,35 @@ body {
   margin-right: 2px;
   scroll-snap-align: start;
   text-align: left;
-  width: 40%;
+  width: 35%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 650px;
+  height: 675px;
 }
 
 .caption {
   margin-top: 10px;
+  font-weight: bold;
 }
 
+.learn_more_link, .gallery_line_1 {
+  text-decoration: none; /* Remove default underline */
+  color: #000; /* Set link color */
+  border-bottom: .3px solid transparent; /* Add a transparent underline */
+  transition: border-bottom 0.1s;
+}
+
+.learn_more_link:hover, .gallery_line_1:hover {
+  border-bottom: 1px solid #000; /* Add underline on hover */
+}
+
+/*------ Controls for the artist series gallery ------*/
 .controls {
   margin-top: 20px;
   text-align: center;
