@@ -1,17 +1,24 @@
 body {
-    background-color: #000;
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10%;
-    background: linear-gradient(to bottom, #000, #ddd);
-    background-attachment: fixed;
-    background-size: 100% 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  background-size: 100% 100%;
+  overflow: hidden;
 }
 
 header {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    z-index: 1; 
+    position: relative;
+}
+
+main {
+  z-index: 1; 
+  position: relative;
 }
 
 .logo_img {
@@ -23,6 +30,17 @@ header {
 
 .logo_img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  #background {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place the background behind the content */
+    background: url('../links/matrix_gif.gif') center center fixed;
+    background-size: cover;
   }
 
 h1 {
@@ -39,12 +57,20 @@ h1 {
     align-items: center;
     background-color: #fff;
     border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px;
-    cursor:progress;
-    transition: background-color 0.3s;
+    margin: 25px 0;
+    padding: 15px;
+    cursor:pointer;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 45px 20px;
 }
 
+.visible li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 .link-list li:hover {
     background-color: #f0f0f0;
 }
@@ -76,3 +102,11 @@ footer {
     text-align: center;
     padding-top: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    /* Mobile styles */
+  
+    body {
+    padding: 20px 20px 20px 20px;
+    }
+  }
